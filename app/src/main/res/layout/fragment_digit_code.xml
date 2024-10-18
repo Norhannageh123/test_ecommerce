@@ -1,0 +1,112 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="#704F38" />
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ENTER 4 DIGIT CODE"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="#704F38"
+        android:gravity="center"
+        android:paddingTop="16dp" />
+
+    <!-- Subtitle -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter the 4 digit code that you received on your email."
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:paddingBottom="16dp" />
+
+    <!-- Code Input -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <EditText
+            android:id="@+id/code1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:inputType="number"
+            android:hint="1" />
+
+        <EditText
+            android:id="@+id/code2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:inputType="number"
+            android:layout_marginStart="8dp"
+            android:hint="2" />
+
+        <EditText
+            android:id="@+id/code3"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:inputType="number"
+            android:layout_marginStart="8dp"
+            android:hint="3" />
+
+        <EditText
+            android:id="@+id/code4"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:inputType="number"
+            android:layout_marginStart="8dp"
+            android:hint="4" />
+    </LinearLayout>
+
+    <!-- Resend Code Link -->
+    <TextView
+        android:id="@+id/txtResendCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email not received? Resend code"
+        android:textSize="14sp"
+        android:textColor="#704F38"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:paddingBottom="24dp"/>
+
+    <!-- Continue Button -->
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        android:padding="12dp"
+        android:backgroundTint="#704F38"
+        android:textColor="#FFFFFF"/>
+</LinearLayout>

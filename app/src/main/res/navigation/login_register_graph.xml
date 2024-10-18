@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_register_graph"
+    app:startDestination="@id/introductionFragment">
+
+    <fragment
+        android:id="@+id/introductionFragment"
+        android:name="com.depi.myapplicatio.fragments.loginRegister.IntroductionFragment"
+        android:label="IntroductionFragment"
+        tools:layout="@layout/fragment_introduction">
+
+        <action
+            android:id="@+id/action_introductionFragment_to_accountOptionsFragment"
+            app:destination="@id/accountOptionsFragment"
+            app:enterAnim="@anim/from_bottom" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.depi.myapplicatio.fragments.loginRegister.Login"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/from_bottom"
+            app:popUpTo="@id/accountOptionsFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_login_to_forgetPassword"
+            app:destination="@id/forgetPassword" /> <!-- تأكد من أن هذا موجه بشكل صحيح -->
+    </fragment>
+
+    <action
+        android:id="@+id/action_resetPasswordFragment_to_login"
+        app:destination="@id/login" />
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.depi.myapplicatio.fragments.loginRegister.RegisterFragment"
+        android:label="RegisterFragment"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_login"
+            app:destination="@id/login"
+            app:enterAnim="@anim/from_bottom"
+            app:popUpTo="@id/accountOptionsFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/accountOptionsFragment"
+        android:name="com.depi.myapplicatio.fragments.loginRegister.AccountOptionsFragment"
+        android:label="AccountOptionsFragment"
+        tools:layout="@layout/fragment_account_options">
+        <action
+            android:id="@+id/action_accountOptionsFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:popUpTo="@id/accountOptionsFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_accountOptionsFragment_to_login"
+            app:destination="@id/login"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:popUpTo="@id/accountOptionsFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgetPassword"
+        android:name="com.depi.myapplicatio.forget_password.ForgetPasswordFragment"
+        android:label="ForgetPasswordFragment"
+        tools:layout="@layout/fragment_forget_password">
+
+        <action
+            android:id="@+id/action_forgetPassword_to_login"
+            app:destination="@id/login" />
+
+        <action
+            android:id="@+id/action_forgetPassword_to_digitcode"
+            app:destination="@id/digitcode" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/digitcode"
+        android:name="com.depi.myapplicatio.digit_code"
+        android:label="fragment_digitcode"
+        tools:layout="@layout/fragment_digit_code">
+        <action
+            android:id="@+id/action_digitcode_to_forgetPassword"
+            app:popUpTo="@id/forgetPassword" />
+    </fragment>
+    <fragment
+        android:id="@+id/reset_password"
+        android:name="com.depi.myapplicatio.reset_password"
+        android:label="fragment_reset_password"
+        tools:layout="@layout/fragment_reset_password" >
+        <action
+            android:id="@+id/action_reset_password_to_digitcode"
+            app:popUpTo="@id/digitcode" />
+        <action
+            android:id="@+id/action_reset_password_to_rest_password_success"
+            app:popUpTo="@id/rest_password_success" />
+    </fragment>
+    <fragment
+        android:id="@+id/rest_password_success"
+        android:name="com.depi.myapplicatio.rest_password_success"
+        android:label="fragment_rest_password_success"
+        tools:layout="@layout/fragment_rest_password_success" >
+        <action
+            android:id="@+id/action_rest_password_success_to_login"
+            app:popUpTo="@id/login" />
+    </fragment>
+
+</navigation>
