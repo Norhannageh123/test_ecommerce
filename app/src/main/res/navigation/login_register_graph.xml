@@ -77,7 +77,7 @@
 
     <fragment
         android:id="@+id/forgetPassword"
-        android:name="com.depi.myapplicatio.forget_password.ForgetPasswordFragment"
+        android:name="com.depi.myapplicatio.ForgetPasswordFragment"
         android:label="ForgetPasswordFragment"
         tools:layout="@layout/fragment_forget_password">
 
@@ -100,6 +100,10 @@
         <action
             android:id="@+id/action_digitcode_to_forgetPassword"
             app:popUpTo="@id/forgetPassword" />
+        <argument
+            android:name="otpCode"
+            app:argType="string"
+            app:nullable="false"/>
     </fragment>
     <fragment
         android:id="@+id/reset_password"
