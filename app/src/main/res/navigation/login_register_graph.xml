@@ -77,7 +77,7 @@
 
     <fragment
         android:id="@+id/forgetPassword"
-        android:name="com.depi.myapplicatio.forget_password.ForgetPasswordFragment"
+        android:name="com.depi.myapplicatio.ForgetPasswordFragment"
         android:label="ForgetPasswordFragment"
         tools:layout="@layout/fragment_forget_password">
 
