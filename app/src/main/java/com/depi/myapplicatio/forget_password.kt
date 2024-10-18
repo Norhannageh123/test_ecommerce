@@ -1,14 +1,10 @@
 package com.depi.myapplicatio
 
-import MailgunApi
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageButton
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -183,7 +179,7 @@ class ForgetPasswordFragment : Fragment() {
 
 interface OtpCodeSendCodeApi {
     @POST("email")
-    @Headers("api-key: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")
+    @Headers("api-key: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")
     fun sendMessage(
         @Body request: OptRequest
     ): Call<OtpResponse>
